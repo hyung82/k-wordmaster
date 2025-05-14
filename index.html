@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kolang 회사 소개</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+        /* CSS Reset (Simple) */
+        body, h1, h3, ul, li, p, div, section, header, footer, img, a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa; 
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; 
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        header h1 a {
+            display: inline-flex; 
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        header h1 img {
+            height: 30px; 
+            margin-right: 10px;
+        }
+
+        /* Main Content */
+        #main_contents_wrap {
+            max-width: 900px;
+            margin: 30px auto; 
+            padding: 0 20px; 
+        }
+        .intro_app {
+            display: flex;
+            flex-direction: column; 
+            gap: 30px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .device {
+            text-align: center; 
+            flex-shrink: 0; 
+        }
+        .device img {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            max-width: 300px; 
+            margin: 0 auto; 
+        }
+
+        .explain_text h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #212529;
+            text-align: center; 
+        }
+        .explain_text > ul > li { /* 직계 자식 li에만 적용 */
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #495057;
+        }
+        .explain_text > ul > li p {
+            margin-bottom: 8px;
+        }
+        
+        .supported-languages {
+            margin-left: 0; /* 수정: 들여쓰기 제거 또는 조정 */
+            margin-top: 8px;
+            list-style-type: none; /* 수정: 불릿 제거 */
+            padding-left: 0; /* 수정: 패딩 제거 */
+        }
+        .supported-languages li {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 4px; 
+            padding-left: 15px; /* 아이콘/텍스트 들여쓰기 효과 */
+            position: relative;
+        }
+        .supported-languages li::before { /* 간단한 불릿 효과 */
+            content: "•";
+            color: #007bff; /* 강조색 */
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em; /* 텍스트와 정렬 */
+            position: absolute;
+            left: 5px; /* 위치 조정 */
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #6c757d;
+            background-color: #fff;
+            border-top: 1px solid #e9ecef;
+            margin-top: 40px;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .intro_app {
+                flex-direction: row; 
+                align-items: flex-start; 
+            }
+            .device {
+                flex: 1; 
+                max-width: 320px; 
+            }
+            .explain_text {
+                flex: 2; 
+                text-align: left; 
+            }
+            .explain_text h3 {
+                text-align: left; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="./index.html">
+              <img src="./images/s_logo.png" alt="Kolang 로고">
+              Kolang : Learn Korean with TOPIK
+            </a>
+        </h1>
+    </header>
+    <div id="main_contents_wrap">
+        <section class="intro_app">
+            <div class="device">
+                <img src="./images/screenshot1.png" alt="Kolang 앱 스크린샷">
+            </div>
+            <div class="explain_text">
+                <h3>
+                  Learn Korean through TOPIK exam questions.
+                </h3>
+                <ul>
+                    <li>
+                        <p>
+                          - Test the TOPIK exam with 10 random questions (RD/LC).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                          - Learning vocabulary and grammar for daily TOPIK questions.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                          - Support the following languages:
+                        </p>
+                        <ul class="supported-languages">
+                            <li>English</li>
+                            <li>Español</li>
+                            <li>Tiếng Việt</li>
+                            <li>ไทย</li>
+                            <li>Bahasa Indonesia</li>
+                            <li>Pусский</li>
+                            <li>汉语</li>
+                            <li>日本語</li>
+                            <li>العربية</li>
+                            <li>Français</li>
+                            <li>Монгол</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        Copyright © 2024 Kolang<br/>
+        e-Mail: <a href="mailto:kolangobal@gmail.com" target="_blank">kolangobal@gmail.com</a>
+    </footer>
+</body>
+</html>
